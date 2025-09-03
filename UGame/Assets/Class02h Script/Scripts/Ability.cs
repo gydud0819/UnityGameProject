@@ -1,7 +1,13 @@
 using UnityEngine;
 
-public class Test1 : MonoBehaviour
+public class Ability
 {
+
+    public Ability()
+    {
+        Debug.Log("생성자");
+    }
+
     [Header("스크립트 테스트")]
     //[SerializeField] Rigidbody rigidbody;
     //[SerializeField] Transform transform;
@@ -10,8 +16,6 @@ public class Test1 : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
-
         Debug.Log("Strength : " + strength);
     }
 
