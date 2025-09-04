@@ -1,22 +1,22 @@
 using UnityEngine;
+[System.Serializable]       // 데이터 직렬화 
 
 public class Ability
 {
-
     public Ability()
     {
-        Debug.Log("생성자");
+        Debug.Log("Ability");
     }
 
     [Header("스크립트 테스트")]
-    //[SerializeField] Rigidbody rigidbody;
-    //[SerializeField] Transform transform;
 
-    [SerializeField] private int strength;
+    [SerializeField] private int strength = 10;
+
+    public int Strength { get { return strength; } }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("Strength : " + strength);
+        Debug.Log("strength : " + strength);
     }
 
   
