@@ -1,14 +1,16 @@
+using System;
 using UnityEngine;
+[RequireComponent(typeof(Move))]        // RequireComponent 자동으로 붙여주는 컴포넌트 개쩐당 히히 
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private Vector3 direction;
-    [SerializeField] private float speed = 10f;
+   
+    [SerializeField] Move move;
     //private Transform transform;    // transform이 내부에 선언되어 있기 때문에 굳이 선언해서 쓸 필요가 없..다? 아닌거같은ㄴ데 
-    private void Start()
+
+    private void Awake()
     {
-        transform.position = new Vector3(1, 1, 1);
-        Debug.Log($"position : {transform.position}");
+        move = GetComponent<Move>();
     }
 
     private void Update()
@@ -34,17 +36,23 @@ public class Character : MonoBehaviour
         // direction 변수말고 또 잇어야하나
 
         // P = P0 + vt
-        direction.x = Input.GetAxis("Horizontal");
-        direction.z = Input.GetAxis("Vertical");
 
+
+        move.OnMove(new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")));
         // 벡터의 크기를 1로 설정한다.
-        direction.Normalize();
+        //direction.Normalize();
 
         // Time.deltaTime
         // 마지막 프레임 이후의 완료되는 시간
 
-        transform.position += direction * speed * Time.deltaTime;
+       
 
+       
 
+        
+        
     }
+
+    
+
 }
