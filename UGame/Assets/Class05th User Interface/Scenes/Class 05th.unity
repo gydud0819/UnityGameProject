@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beebf81fd52903240b0c181e442803b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: []
+  titleText: {fileID: 0}
 --- !u!1 &1279332774
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,10 +994,6 @@ MonoBehaviour:
   - Start
   - Option
   - Quit
-  selectable:
-  - {fileID: 1865518958}
-  - {fileID: 1274847268}
-  - {fileID: 1632279271}
 --- !u!4 &1315197454
 Transform:
   m_ObjectHideFlags: 0
@@ -1364,7 +1360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beebf81fd52903240b0c181e442803b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: []
+  titleText: {fileID: 0}
 --- !u!1 &1865518952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,7 +1557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beebf81fd52903240b0c181e442803b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: []
+  titleText: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

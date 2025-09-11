@@ -8,7 +8,7 @@ public class ButtonManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     //[SerializeField] Text[] buttonName;
     [SerializeField] string[] buttonName = new string[] { "Start", "Option", "Quit" };
-    [SerializeField] Selectable[] selectable;
+    //[SerializeField] Selectable[] selectable;
     void Start()
     {
         //buttonName = GetComponentInChildren<Text>();
@@ -20,15 +20,6 @@ public class ButtonManager : MonoBehaviour
             int index = i;      // 변수 캡쳐,,, 메모,,, 
 
             buttonList[i].GetComponentInChildren<Text>().text = buttonName[index];
-
-            //buttonList[i].GetComponentInChildren<Selectable>().Enter();
-            //buttonList[i].GetComponentInChildren<Selectable>().Exit();
-            //buttonList[i].GetComponentInChildren<Selectable>().Down();
-
-            //selectable[i].Enter();
-            //selectable[i].Exit();
-            //selectable[i].Down();
-
 
             buttonList[i].onClick.AddListener(() => actions[index]());     // 설마햇는데 진짜 람다식이엿네;;;;;;;;
         }
